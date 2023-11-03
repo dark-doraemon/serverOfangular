@@ -11,6 +11,7 @@ namespace webapi.DataAccess
 
         IEnumerable<Product> getProducts { get; }
         public IEnumerable<Product> getProductsByCategory(string category);
+        public Product getProductsByProductId(string productId);
         void addProduct(Product product);
         void updateProduct(Product product);
         void deleteProduct(string id);

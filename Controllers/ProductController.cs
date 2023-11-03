@@ -25,6 +25,12 @@ namespace webapi.Controllers
             return repo.getProductsByCategory(categoryId);
         }
 
+        [HttpGet("[action]/{productId}")]
+        public Product GetByProductId(string productId)
+        {
+            return repo.getProductsByProductId(productId);
+        }
+
         [HttpPost("[action]")]
         public void Post([FromBody] Product product)
         {

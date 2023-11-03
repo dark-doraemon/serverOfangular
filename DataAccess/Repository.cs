@@ -20,6 +20,11 @@ namespace webapi.DataAccess
             return context.Products.Where(p => p.Category.CategoryId == category);
         }
 
+        public Product getProductsByProductId(string productId)
+        {
+            return context.Products.Where(p => p.ProductId == productId).FirstOrDefault();
+        }
+
         public IEnumerable<Category> getCategories => context.Categories;
 
         public IEnumerable<Category> GetCategoriesByType(string categoryName)
@@ -69,6 +74,6 @@ namespace webapi.DataAccess
         {
         }
 
-       
+        
     }
 }
