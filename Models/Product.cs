@@ -1,4 +1,6 @@
-﻿namespace webapi.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace webapi.Models
 {
     public class Product
     {

@@ -22,7 +22,7 @@ namespace webapi.DataAccess
 
         public Product getProductsByProductId(string productId)
         {
-            return context.Products.Where(p => p.ProductId == productId).FirstOrDefault();
+            return context.Products.Where(p => p.ProductId == productId).Include(p => p.Category).FirstOrDefault();
         }
 
         public IEnumerable<Category> getCategories => context.Categories;
